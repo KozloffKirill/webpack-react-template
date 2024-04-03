@@ -9,5 +9,8 @@ module.exports = {
         path: path.resolve(__dirname, 'build'),
         clean: true,
     },
-    plugins: [new HtmlWebpackPlugin('./src/index.html')]
+    plugins: [new HtmlWebpackPlugin('./src/index.html')],
+    devServer: {
+        static: './build',
+    },
 };
