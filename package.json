@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "Webpack template (React)",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/KozloffKirill/webpack-react-template"
   },
-  "author": "Kirill Kozlov"
+  "author": "Kirill Kozlov",
+  "devDependencies": {
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  }
 }
