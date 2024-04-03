@@ -1,0 +1,13 @@
+{
+  "name": "webpack-react-template",
+  "version": "1.0.0",
+  "description": "Webpack template (React)",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KozloffKirill/webpack-react-template"
+  },
+  "author": "Kirill Kozlov"
+}
