@@ -8,7 +8,8 @@
       "allowJs": true,
       "moduleResolution": "node",
       "allowSyntheticDefaultImports": true, //https://webpack.js.org/configuration/configuration-languages/#typescript
-      "esModuleInterop": true //https://webpack.js.org/configuration/configuration-languages/#typescript
+      "esModuleInterop": true, //https://webpack.js.org/configuration/configuration-languages/#typescript
+      "plugins": [{ "name": "typescript-plugin-css-modules" }]
     },
     "ts-node": { //https://webpack.js.org/configuration/configuration-languages/#typescript
         "compilerOptions": {

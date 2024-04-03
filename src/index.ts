@@ -1,5 +1,6 @@
 import { MAX } from "./test";
+import sts from './styles.module.css';
 
 const str: string = "MAX = " + MAX;
 
-console.log(str);
+console.log(sts.main);
