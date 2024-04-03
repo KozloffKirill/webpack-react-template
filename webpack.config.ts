@@ -1,8 +1,15 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import webpack from 'webpack';
+import 'webpack-dev-server'; //https://webpack.js.org/configuration/configuration-languages/#typescript
 
-module.exports = {
-    mode: 'development',
+type EnvType = {
+    mode: 'production' | 'development';
+    port: number;
+};
+
+const config: (env: EnvType) => webpack.Configuration = ({ mode = 'development', port = 3000 }) => ({
+    mode,
     entry: './src/index.ts',
     output: {
         filename: 'main.[contenthash].js',
@@ -20,6 +27,9 @@ module.exports = {
     },
     plugins: [new HtmlWebpackPlugin({ template: './src/index.html' })],
     devServer: {
+        port,
         static: './build',
     },
-};
+});
+
+export default config;
