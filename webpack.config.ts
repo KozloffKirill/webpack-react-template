@@ -10,7 +10,7 @@ type EnvType = {
 
 const config: (env: EnvType) => webpack.Configuration = ({ mode = 'development', port = 3000 }) => ({
     mode,
-    entry: './src/index.ts',
+    entry: './src/index.tsx',
     output: {
         filename: 'main.[contenthash].js',
         path: path.resolve(__dirname, 'build'),
@@ -37,11 +37,14 @@ const config: (env: EnvType) => webpack.Configuration = ({ mode = 'development',
             }
         ],
     },
-    plugins: [new HtmlWebpackPlugin({ template: './src/index.html' })],
+    plugins: [new HtmlWebpackPlugin({ template: './public/index.html' })],
     devServer: {
         port,
         static: './build',
     },
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js', '.jsx'],
+    }
 });
 
 export default config;
