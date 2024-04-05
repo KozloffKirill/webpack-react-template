@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "description": "Webpack template (React)",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "webpack serve --open",
+    "buildProd": "webpack build --env mode=production",
+    "buildDev": "webpack build --env mode=development",
+    "prettier": "prettier . --write",
+    "eslint": "eslint --fix ."
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/KozloffKirill/webpack-react-template"
