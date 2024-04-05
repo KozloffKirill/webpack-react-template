@@ -2,6 +2,7 @@
   "compilerOptions": {
     "outDir": "./dist/",
     "noImplicitAny": true,
+    "strictNullChecks": true,
     "module": "ESNext", //https://webpack.js.org/configuration/configuration-languages/#typescript
     "target": "es5",
     "jsx": "react",
