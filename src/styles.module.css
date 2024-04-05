@@ -1,12 +1,12 @@
 .app {
-    width: 100px;
-    height: 100px;
-    border: 1px solid saddlebrown;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100px;
+  height: 100px;
+  border: 1px solid saddlebrown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    & button {
-        color: red;
-    }
+  & button {
+    color: red;
+  }
 }
