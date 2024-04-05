@@ -30,4 +30,9 @@ module.exports = {
     'prefer-const': 'warn',
     'prettier/prettier': 'warn',
   },
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
 };
