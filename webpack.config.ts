@@ -3,6 +3,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import webpack from 'webpack';
 import 'webpack-dev-server'; //https://webpack.js.org/configuration/configuration-languages/#typescript
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import WebpackBundleAnalyzer from 'webpack-bundle-analyzer';
 
 type EnvType = {
   mode: 'production' | 'development';
@@ -58,7 +59,14 @@ const config: (env: EnvType) => webpack.Configuration = ({
       },
     ],
   },
-  plugins: [new HtmlWebpackPlugin({ template: './public/index.html' }), new MiniCssExtractPlugin()],
+  plugins: [
+    new HtmlWebpackPlugin({ template: './public/index.html' }),
+    new MiniCssExtractPlugin(),
+    new WebpackBundleAnalyzer.BundleAnalyzerPlugin({
+      analyzerMode: 'disabled',
+      generateStatsFile: true,
+    }),
+  ],
   devServer: {
     port,
     static: './build',

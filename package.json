@@ -7,6 +7,7 @@
     "start": "webpack serve --open",
     "buildProd": "webpack build --env mode=production",
     "buildDev": "webpack build --env mode=development",
+    "showBundleReport": "webpack-bundle-analyzer build/stats.json",
     "prettier": "prettier . --write",
     "eslint": "eslint --fix ."
   },
@@ -25,6 +26,7 @@
     "@types/react": "^18.2.74",
     "@types/react-dom": "^18.2.23",
     "@types/webpack": "^5.28.5",
+    "@types/webpack-bundle-analyzer": "^4.7.0",
     "@types/webpack-dev-server": "^4.7.2",
     "@typescript-eslint/eslint-plugin": "^7.5.0",
     "@typescript-eslint/parser": "^7.5.0",
@@ -41,6 +43,7 @@
     "typescript": "^5.4.3",
     "typescript-plugin-css-modules": "^5.1.0",
     "webpack": "^5.91.0",
+    "webpack-bundle-analyzer": "^4.10.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.4"
   }
